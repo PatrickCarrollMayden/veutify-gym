@@ -1,4 +1,4 @@
-# vuetify-todo
+# vuetify-gym
 
 ## Project setup
 ```
