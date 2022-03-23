@@ -78,12 +78,13 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
   export default {
     data: () => ({
        drawer: null,
        items: [
           { title: 'Todo', icon: 'mdi-arm-flex', to: '/' },
-          { title: 'About', icon: 'mdi-help-box', to: '/about' },
+          { title: 'Workout Presets', icon: 'mdi-help-box', to: '/workout-presets' },
         ], 
        }),
   }
