@@ -86,6 +86,7 @@
       }
     },
     methods: {
+      
       addTask() {
         let newTask = {
           id: Date.now(),
@@ -95,10 +96,12 @@
         this.tasks.push(newTask)
         this.newExerciseTitle = ''
       },
+
       doneTask(id) {
         let task = this.tasks.filter(task => task.id === id)[0]
         task.done = !task.done
       },
+
       deleteTask(id) {
         this.tasks = this.tasks.filter(task => task.id !== id)
       }
