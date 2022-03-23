@@ -29,17 +29,17 @@
             <v-radio
               label=Push
               value=1
-              @click="workout = 'some push workout'"
+              @click="workout = 'Push'"
             ></v-radio>
             <v-radio
               label=Pull
               value=2
-              @click="workout = 'some pull workout'"
+              @click="workout = 'Pull'"
             ></v-radio>
             <v-radio
               label=Legs
               value=3
-              @click="workout = 'some legs workout'"
+              @click="workout = 'Legs'"
             ></v-radio>
           </v-radio-group>
         </v-card-text>
