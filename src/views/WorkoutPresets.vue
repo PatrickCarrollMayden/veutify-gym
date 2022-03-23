@@ -63,7 +63,15 @@
       </v-card>
     </v-dialog>
     </v-row>
-    <span>Exercise: {{ workout }}</span>
+    <template>
+      <v-data-table
+        :headers="headers"
+        :items="exercises"
+        :items-per-page="8"
+        class="elevation-1"
+      ></v-data-table>
+</template>
+
     </v-img>
   </div>  
 </template>
@@ -75,6 +83,55 @@
         dialogm1: '',
         dialog: false,
         workout: '',
+        headers: [
+          {
+            text: 'Legs',
+            align: 'start',
+            sortable: false,
+            value: 'name',
+          },
+          { text: 'Sets', value: 'sets' },
+          { text: 'Weight', value: 'weight' },
+          { text: 'Variation', value: 'variation' },
+        ],
+        exercises: [
+          {
+            name: 'Barbell Squat Max',
+            sets: '1 x 1',
+            weight: 92.5,
+            variation: 'Hack Squat',
+          },
+          {
+            name: 'Barbell Squat Working',
+            sets: '1 x 5',
+            weight: 72.5,
+            variation: 'N/A',
+          },
+          {
+            name: 'RDL',
+            sets: '3 x 8/12',
+            weight: 'RPE 8-9',
+            variation: 'Dumbell RDL',
+          },
+          {
+            name: 'Leg Extension',
+            sets: '3 x 10',
+            weight: 'RPE 8/9',
+            variation: 'Lunges',
+          },
+          {
+            name: 'Leg Extension',
+            sets: '1 x Failure',
+            weight: 'RPE 10',
+            variation: 'N/A',
+          },
+          {
+            name: 'Hamstring Curls',
+            sets: '3 x 10',
+            weight: 'RPE 8/9',
+            variation: 'Glute Ham raise',
+          },
+        ]
       }
     },
     }
