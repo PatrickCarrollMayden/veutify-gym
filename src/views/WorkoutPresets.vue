@@ -1,5 +1,6 @@
 <template>
   <div class="about" pa-6>
+    <v-img src='/weights.jpg'>
     <h1>Workout Presets</h1>
     <v-row justify="center" class="pa-10">
     <v-dialog
@@ -25,7 +26,6 @@
             v-model="dialogm1"
             column
           >
-            <v-for ref="workouts" class="item in workouts">
             <v-radio
               label=Push
               value=1
@@ -41,7 +41,6 @@
               value=3
               @click="workout = 'some legs workout'"
             ></v-radio>
-            </v-for>
           </v-radio-group>
         </v-card-text>
         <v-divider></v-divider>
@@ -65,6 +64,7 @@
     </v-dialog>
     </v-row>
     <span>Exercise: {{ workout }}</span>
+    </v-img>
   </div>  
 </template>
 
