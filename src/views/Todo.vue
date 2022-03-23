@@ -86,7 +86,7 @@
       }
     },
     methods: {
-      
+
       addTask() {
         let newTask = {
           id: Date.now(),
