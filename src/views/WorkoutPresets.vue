@@ -27,8 +27,19 @@
           >
             <v-for ref="workouts" class="item in workouts">
             <v-radio
-              label=workouts.push.label
-              value=workouts.push.id
+              label=Push
+              value=1
+              @click="workout = 'some push workout'"
+            ></v-radio>
+            <v-radio
+              label=Pull
+              value=2
+              @click="workout = 'some pull workout'"
+            ></v-radio>
+            <v-radio
+              label=Legs
+              value=3
+              @click="workout = 'some legs workout'"
             ></v-radio>
             </v-for>
           </v-radio-group>
@@ -53,6 +64,7 @@
       </v-card>
     </v-dialog>
     </v-row>
+    <span>Exercise: {{ workout }}</span>
   </div>  
 </template>
 
