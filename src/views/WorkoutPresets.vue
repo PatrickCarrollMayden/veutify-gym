@@ -1,0 +1,70 @@
+<template>
+  <div class="about" pa-6>
+    <h1>Workout Presets</h1>
+    <v-row justify="center" class="pa-10">
+    <v-dialog
+      v-model="dialog"
+      scrollable
+      max-width="300px"
+    >
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          Workouts List
+        </v-btn>
+      </template>
+      <v-card>
+        <v-card-title>Select Country</v-card-title>
+        <v-divider></v-divider>
+        <v-card-text style="height: 300px;">
+          <v-radio-group
+            v-model="dialogm1"
+            column
+          >
+            <v-for ref="workouts" class="item in workouts">
+            <v-radio
+              label=workouts.push.label
+              value=workouts.push.id
+            ></v-radio>
+            </v-for>
+          </v-radio-group>
+        </v-card-text>
+        <v-divider></v-divider>
+        <v-card-actions>
+          <v-btn
+            color="blue darken-1"
+            text
+            @click="dialog = false"
+          >
+            Close
+          </v-btn>
+          <v-btn
+            color="blue darken-1"
+            text
+            @click="dialog = false"
+          >
+            Save
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+    </v-row>
+  </div>  
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        dialogm1: '',
+        dialog: false,
+        workout: '',
+      }
+    },
+    }
+</script>
+
